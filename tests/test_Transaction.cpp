@@ -4,7 +4,7 @@
 
 TEST(Transaction, Banking){
 	const int base_A = 5000, base_B = 5000, base_fee = 100;
-	
+
 	Account Alice(0,base_A), Bob(1,base_B);
 	Transaction test_tran;
 
