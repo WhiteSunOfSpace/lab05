@@ -1,4 +1,4 @@
-name: Action_for_tests
+name: Actions_for_tests
 
 on:
  push:
@@ -8,10 +8,14 @@ on:
 
 jobs: 
  build_Linux:
+
   runs-on: ubuntu-latest
 
   steps:
   - uses: actions/checkout@v3
+
+  - name: Adding gtest
+    run: git clone https://github.com/google/googletest.git third-party/gtest -b release-1.11.0
 
   - name: Install lcov
     run: sudo apt-get install -y lcov
